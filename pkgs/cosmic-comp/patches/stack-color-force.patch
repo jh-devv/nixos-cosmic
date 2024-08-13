@@ -1,0 +1,33 @@
+diff --git a/src/shell/element/stack/tab.rs b/src/shell/element/stack/tab.rs
+index 7750820..4637664 100644
+--- a/src/shell/element/stack/tab.rs
++++ b/src/shell/element/stack/tab.rs
+@@ -22,26 +22,14 @@ use super::tab_text::tab_text;
+ 
+ /// The background color of the stack tab header.
+ pub(super) fn primary_container_color(theme: &cosmic::cosmic_theme::Theme) -> Color {
+-    const PRIMARY_CONTAINER_DARK: Color = Color::from_rgba(0.149, 0.149, 0.149, 1.0);
+     const PRIMARY_CONTAINER_LIGHT: Color = Color::from_rgba(0.894, 0.894, 0.894, 1.0);
+-
+-    if theme.is_dark {
+-        PRIMARY_CONTAINER_DARK
+-    } else {
+-        PRIMARY_CONTAINER_LIGHT
+-    }
++    PRIMARY_CONTAINER_LIGHT
+ }
+ 
+ /// The background color for the selected stack tab.
+ pub(super) fn selected_state_color(theme: &cosmic::cosmic_theme::Theme) -> Color {
+-    const SELECTED_STATE_DARK: Color = Color::from_rgba(0.195, 0.195, 0.195, 1.0);
+     const SELECTED_STATE_LIGHT: Color = Color::from_rgba(0.8344, 0.8344, 0.8344, 1.0);
+-
+-    if theme.is_dark {
+-        SELECTED_STATE_DARK
+-    } else {
+-        SELECTED_STATE_LIGHT
+-    }
++    SELECTED_STATE_LIGHT
+ }
+ 
+ #[derive(Clone, Copy)]

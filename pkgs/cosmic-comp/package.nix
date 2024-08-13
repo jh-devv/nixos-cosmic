@@ -47,6 +47,10 @@ rustPlatform.buildRustPackage {
     };
   };
 
+  patches = [
+    ./patches/stack-color-force.patch
+  ];
+
   separateDebugInfo = true;
 
   nativeBuildInputs = [ libcosmicAppHook pkg-config ];
